@@ -41,15 +41,7 @@ namespace IotDemo {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 38 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.GroupBox groupBox_ASettinf;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 49 "..\..\MainWindow.xaml"
+        #line 47 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_ShowText_A_0;
         
@@ -57,7 +49,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 53 "..\..\MainWindow.xaml"
+        #line 51 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_PortNumb_A_0;
         
@@ -65,7 +57,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 58 "..\..\MainWindow.xaml"
+        #line 56 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_MinVlaue_A_0;
         
@@ -73,7 +65,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 65 "..\..\MainWindow.xaml"
+        #line 63 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_MaxVlaue_A_0;
         
@@ -81,7 +73,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 75 "..\..\MainWindow.xaml"
+        #line 73 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_ShowText_A_1;
         
@@ -89,7 +81,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 79 "..\..\MainWindow.xaml"
+        #line 77 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_PortNumb_A_1;
         
@@ -97,7 +89,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 84 "..\..\MainWindow.xaml"
+        #line 82 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_MinVlaue_A_1;
         
@@ -105,7 +97,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 91 "..\..\MainWindow.xaml"
+        #line 89 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_MaxVlaue_A_1;
         
@@ -113,7 +105,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 101 "..\..\MainWindow.xaml"
+        #line 99 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_ShowText_A_2;
         
@@ -121,7 +113,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 105 "..\..\MainWindow.xaml"
+        #line 103 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_PortNumb_A_2;
         
@@ -129,7 +121,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 110 "..\..\MainWindow.xaml"
+        #line 108 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_MinVlaue_A_2;
         
@@ -137,7 +129,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 117 "..\..\MainWindow.xaml"
+        #line 115 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_MaxVlaue_A_2;
         
@@ -145,15 +137,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 126 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.GroupBox groupBox_DSetting;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 137 "..\..\MainWindow.xaml"
+        #line 133 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_ShowText_D_0;
         
@@ -161,7 +145,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 142 "..\..\MainWindow.xaml"
+        #line 138 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_PortNumb_D_0;
         
@@ -169,7 +153,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 147 "..\..\MainWindow.xaml"
+        #line 143 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btn_SwitchOpen_D_0;
         
@@ -177,7 +161,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 152 "..\..\MainWindow.xaml"
+        #line 147 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btn_SwitchClose_D_0;
         
@@ -185,7 +169,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 157 "..\..\MainWindow.xaml"
+        #line 151 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_NoTUseSwitch_D_0;
         
@@ -193,7 +177,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 167 "..\..\MainWindow.xaml"
+        #line 160 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_ShowText_D_1;
         
@@ -201,7 +185,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 172 "..\..\MainWindow.xaml"
+        #line 165 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_PortNumb_D_1;
         
@@ -209,7 +193,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 177 "..\..\MainWindow.xaml"
+        #line 170 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btn_SwitchOpen_D_1;
         
@@ -217,7 +201,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 181 "..\..\MainWindow.xaml"
+        #line 174 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btn_SwitchClose_D_1;
         
@@ -225,7 +209,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 185 "..\..\MainWindow.xaml"
+        #line 178 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_NoTUseSwitch_D_1;
         
@@ -233,7 +217,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 195 "..\..\MainWindow.xaml"
+        #line 187 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_ShowText_D_2;
         
@@ -241,7 +225,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 200 "..\..\MainWindow.xaml"
+        #line 192 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBox_PortNumb_D_2;
         
@@ -249,7 +233,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 205 "..\..\MainWindow.xaml"
+        #line 197 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btn_SwitchOpen_D_2;
         
@@ -257,7 +241,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 209 "..\..\MainWindow.xaml"
+        #line 201 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btn_SwitchClose_D_2;
         
@@ -265,7 +249,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 213 "..\..\MainWindow.xaml"
+        #line 205 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_NoTUseSwitch_D_2;
         
@@ -273,15 +257,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 222 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.GroupBox groupBox_SerialSetting;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 228 "..\..\MainWindow.xaml"
+        #line 218 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox comBoBox_SerialNames;
         
@@ -289,15 +265,15 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 232 "..\..\MainWindow.xaml"
+        #line 222 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ComboBox comBoBox_SerialPort;
+        internal System.Windows.Controls.ComboBox conBoBox_SerialPort;
         
         #line default
         #line hidden
         
         
-        #line 273 "..\..\MainWindow.xaml"
+        #line 252 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_DataViewShowText_A_0;
         
@@ -305,7 +281,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 280 "..\..\MainWindow.xaml"
+        #line 259 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_DataShow_A_0;
         
@@ -313,7 +289,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 291 "..\..\MainWindow.xaml"
+        #line 270 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_DataViewShowText_A_1;
         
@@ -321,7 +297,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 298 "..\..\MainWindow.xaml"
+        #line 277 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_DataShow_A_1;
         
@@ -329,7 +305,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 309 "..\..\MainWindow.xaml"
+        #line 288 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_DataViewShowText_A_2;
         
@@ -337,7 +313,7 @@ namespace IotDemo {
         #line hidden
         
         
-        #line 316 "..\..\MainWindow.xaml"
+        #line 295 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock_DataShow_A_2;
         
@@ -375,145 +351,108 @@ namespace IotDemo {
             switch (connectionId)
             {
             case 1:
-            this.groupBox_ASettinf = ((System.Windows.Controls.GroupBox)(target));
-            return;
-            case 2:
             this.textBlock_ShowText_A_0 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 3:
+            case 2:
             this.textBox_PortNumb_A_0 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 4:
+            case 3:
             this.textBox_MinVlaue_A_0 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 5:
+            case 4:
             this.textBox_MaxVlaue_A_0 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 6:
+            case 5:
             this.textBlock_ShowText_A_1 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 7:
+            case 6:
             this.textBox_PortNumb_A_1 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 8:
+            case 7:
             this.textBox_MinVlaue_A_1 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 9:
+            case 8:
             this.textBox_MaxVlaue_A_1 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 10:
+            case 9:
             this.textBlock_ShowText_A_2 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 11:
+            case 10:
             this.textBox_PortNumb_A_2 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 12:
+            case 11:
             this.textBox_MinVlaue_A_2 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 13:
+            case 12:
             this.textBox_MaxVlaue_A_2 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 14:
-            this.groupBox_DSetting = ((System.Windows.Controls.GroupBox)(target));
-            return;
-            case 15:
+            case 13:
             this.textBlock_ShowText_D_0 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 16:
+            case 14:
             this.textBox_PortNumb_D_0 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 17:
+            case 15:
             this.btn_SwitchOpen_D_0 = ((System.Windows.Controls.Button)(target));
-            
-            #line 150 "..\..\MainWindow.xaml"
-            this.btn_SwitchOpen_D_0.Click += new System.Windows.RoutedEventHandler(this.ButtonClick_SwitchOpen);
-            
-            #line default
-            #line hidden
             return;
-            case 18:
+            case 16:
             this.btn_SwitchClose_D_0 = ((System.Windows.Controls.Button)(target));
-            
-            #line 155 "..\..\MainWindow.xaml"
-            this.btn_SwitchClose_D_0.Click += new System.Windows.RoutedEventHandler(this.ButtonClick_SwitchClose);
-            
-            #line default
-            #line hidden
             return;
-            case 19:
+            case 17:
             this.textBlock_NoTUseSwitch_D_0 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 20:
+            case 18:
             this.textBlock_ShowText_D_1 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 21:
+            case 19:
             this.textBox_PortNumb_D_1 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 22:
+            case 20:
             this.btn_SwitchOpen_D_1 = ((System.Windows.Controls.Button)(target));
             return;
-            case 23:
+            case 21:
             this.btn_SwitchClose_D_1 = ((System.Windows.Controls.Button)(target));
             return;
-            case 24:
+            case 22:
             this.textBlock_NoTUseSwitch_D_1 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 25:
+            case 23:
             this.textBlock_ShowText_D_2 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 26:
+            case 24:
             this.textBox_PortNumb_D_2 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 27:
+            case 25:
             this.btn_SwitchOpen_D_2 = ((System.Windows.Controls.Button)(target));
             return;
-            case 28:
+            case 26:
             this.btn_SwitchClose_D_2 = ((System.Windows.Controls.Button)(target));
             return;
-            case 29:
+            case 27:
             this.textBlock_NoTUseSwitch_D_2 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 30:
-            this.groupBox_SerialSetting = ((System.Windows.Controls.GroupBox)(target));
-            return;
-            case 31:
+            case 28:
             this.comBoBox_SerialNames = ((System.Windows.Controls.ComboBox)(target));
             return;
-            case 32:
-            this.comBoBox_SerialPort = ((System.Windows.Controls.ComboBox)(target));
+            case 29:
+            this.conBoBox_SerialPort = ((System.Windows.Controls.ComboBox)(target));
             return;
-            case 33:
-            
-            #line 244 "..\..\MainWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonClick_OpenSerial);
-            
-            #line default
-            #line hidden
-            return;
-            case 34:
-            
-            #line 249 "..\..\MainWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonClick_RpeatGetSerialPort);
-            
-            #line default
-            #line hidden
-            return;
-            case 35:
+            case 30:
             this.textBlock_DataViewShowText_A_0 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 36:
+            case 31:
             this.textBlock_DataShow_A_0 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 37:
+            case 32:
             this.textBlock_DataViewShowText_A_1 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 38:
+            case 33:
             this.textBlock_DataShow_A_1 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 39:
+            case 34:
             this.textBlock_DataViewShowText_A_2 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 40:
+            case 35:
             this.textBlock_DataShow_A_2 = ((System.Windows.Controls.TextBlock)(target));
             return;
             }

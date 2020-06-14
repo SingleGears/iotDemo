@@ -1,0 +1,17 @@
+D:\_NET&C#\WPF\IotDemo\bin\Debug\IotDemo.exe.config
+D:\_NET&C#\WPF\IotDemo\bin\Debug\IotDemo.exe
+D:\_NET&C#\WPF\IotDemo\bin\Debug\IotDemo.pdb
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.csprojAssemblyReference.cache
+D:\_NET&C#\WPF\IotDemo\obj\Debug\MainWindow.g.cs
+D:\_NET&C#\WPF\IotDemo\obj\Debug\App.g.cs
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo_MarkupCompile.cache
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo_MarkupCompile.lref
+D:\_NET&C#\WPF\IotDemo\obj\Debug\MainWindow.baml
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.g.resources
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.Properties.Resources.resources
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.csproj.GenerateResource.cache
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.csproj.CoreCompileInputs.cache
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.exe
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.pdb
+D:\_NET&C#\WPF\IotDemo\bin\Debug\SerialPortProvider.dll
+D:\_NET&C#\WPF\IotDemo\obj\Debug\IotDemo.csproj.CopyComplete
