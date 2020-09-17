@@ -62,7 +62,7 @@ namespace IotDemo.Class
                             if (temp != null)
                             {
                                 //后续通过ini文件配置算法
-                                TextBlock0.Text = ConvertHelper.Temperature((int)temp).ToString();
+                                TextBlock0.Text = ConvertHelper.Temperature((int)temp).ToString("f2");
                             }
                         }
                         else
@@ -77,7 +77,7 @@ namespace IotDemo.Class
                             int? temp = GetAdam4017Data.GetData(data, (int)_port.APort.GetPort1);
                             if (temp != null)
                             {
-                                TextBlock1.Text = ConvertHelper.Humidity((int)temp).ToString();
+                                TextBlock1.Text = ConvertHelper.Humidity((int)temp).ToString("f2");
                             }
                         }
                         else
@@ -92,7 +92,7 @@ namespace IotDemo.Class
                             int? temp = GetAdam4017Data.GetData(data, (int)_port.APort.GetPort2);
                             if (temp != null)
                             {
-                                TextBlock2.Text = ConvertHelper.Light((int)temp).ToString();
+                                TextBlock2.Text = ConvertHelper.Light((int)temp).ToString("f2");
                             }
                         }
                         else

@@ -23,6 +23,6 @@ namespace IotDemo.Model
 
         public static TextBox MaxValue0;
         public static TextBox MaxValue1;
-        public static TextBox MaxValue2
+        public static TextBox MaxValue2;
     }
 }

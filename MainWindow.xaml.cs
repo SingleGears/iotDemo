@@ -42,8 +42,8 @@ namespace IotDemo
             TextBoxControls.APort2 = textBox_PortNumb_A_2;
 
             TextBoxControls.DPort0 = textBox_PortNumb_D_0;
-            TextBoxControls.APort1 = textBox_PortNumb_A_1;
-            TextBoxControls.APort2 = textBox_PortNumb_A_2;
+            TextBoxControls.DPort1 = textBox_PortNumb_D_1;
+            TextBoxControls.DPort2 = textBox_PortNumb_D_2;
 
             TextBoxControls.MinValue0 = textBox_MinVlaue_A_0;
             TextBoxControls.MinValue1 = textBox_MinVlaue_A_1;
@@ -73,12 +73,12 @@ namespace IotDemo
         private void ButtonClick_OpenSerial(object sender, RoutedEventArgs e)
         {
             ///************启动串口*******************//
-            if(comBoBox_SerialNames.Text == "")
+            if (comBoBox_SerialNames.Text == "")
             {
                 MessageBox.Show("串口不能为空");
                 return;
             }
-            if(comBoBox_SerialPort.Text != "")
+            if (comBoBox_SerialPort.Text != "")
             {
                 _adam = new ADAM(comBoBox_SerialNames.Text,
                     Convert.ToInt32(comBoBox_SerialPort.Text));
@@ -104,6 +104,8 @@ namespace IotDemo
             _getAValue.TextBlock0 = textBlock_DataShow_A_0;
             _getAValue.TextBlock1 = textBlock_DataShow_A_1;
             _getAValue.TextBlock2 = textBlock_DataShow_A_2;
+
+            _getAValue.Start();
         }
 
         //private ADPort getPort()
@@ -126,25 +128,47 @@ namespace IotDemo
             }
             ADPort port = _getTextBoxValue.GetPort;
 
-            if(btn.Name == btn_SwitchOpen_D_0.Name)
+            if (btn.Name == btn_SwitchOpen_D_0.Name)
             {
-                btn_SwitchClose_D_0.IsEnabled = true;
-                btn_SwitchOpen_D_0.IsEnabled = false;
-                new SwitchOpen(_adam, (int)port.DPort.GetPort0);
+                if (fun(port.DPort.GetPort0))
+                {
+                    btn_SwitchClose_D_0.IsEnabled = true;
+                    btn_SwitchOpen_D_0.IsEnabled = false;
+                    new SwitchOpen(_adam, (int)port.DPort.GetPort0);
+                }
             }
             if (btn.Name == btn_SwitchOpen_D_1.Name)
             {
-                btn_SwitchClose_D_1.IsEnabled = true;
-                btn_SwitchOpen_D_1.IsEnabled = false;
-                new SwitchOpen(_adam, (int)port.DPort.GetPort1);
+                if (fun(port.DPort.GetPort1))
+                {
+                    btn_SwitchClose_D_1.IsEnabled = true;
+                    btn_SwitchOpen_D_1.IsEnabled = false;
+                    new SwitchOpen(_adam, (int)port.DPort.GetPort1);
+                }
             }
             if (btn.Name == btn_SwitchOpen_D_2.Name)
             {
-                btn_SwitchClose_D_2.IsEnabled = true;
-                btn_SwitchOpen_D_2.IsEnabled = false;
-                new SwitchOpen(_adam, (int)port.DPort.GetPort2);
+                if (fun(port.DPort.GetPort2))
+                {
+                    btn_SwitchClose_D_2.IsEnabled = true;
+                    btn_SwitchOpen_D_2.IsEnabled = false;
+                    new SwitchOpen(_adam, (int)port.DPort.GetPort2);
+                }
             }
 
+            //内嵌方法
+            bool fun(int? data)
+            {
+                if (data != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("值无效");
+                    return false;
+                }
+            }
         }
         /// <summary>
         /// 数字量开光控制方法--关
@@ -163,23 +187,45 @@ namespace IotDemo
 
             if (btn.Name == btn_SwitchClose_D_0.Name)
             {
-                btn_SwitchClose_D_0.IsEnabled = false;
-                btn_SwitchOpen_D_0.IsEnabled = true;
-                new SwitchClose(_adam, (int)port.DPort.GetPort0);
+                if (fun(port.DPort.GetPort0))
+                {
+                    btn_SwitchClose_D_0.IsEnabled = false;
+                    btn_SwitchOpen_D_0.IsEnabled = true;
+                    new SwitchClose(_adam, (int)port.DPort.GetPort0);
+                }
             }
             if (btn.Name == btn_SwitchClose_D_1.Name)
             {
-                btn_SwitchClose_D_1.IsEnabled = false;
-                btn_SwitchOpen_D_1.IsEnabled = true;
-                new SwitchClose(_adam, (int)port.DPort.GetPort1);
+                if (fun(port.DPort.GetPort1))
+                {
+                    btn_SwitchClose_D_1.IsEnabled = false;
+                    btn_SwitchOpen_D_1.IsEnabled = true;
+                    new SwitchClose(_adam, (int)port.DPort.GetPort1);
+                }
             }
             if (btn.Name == btn_SwitchClose_D_2.Name)
             {
-                btn_SwitchClose_D_2.IsEnabled = false;
-                btn_SwitchOpen_D_2.IsEnabled = true;
-                new SwitchClose(_adam, (int)port.DPort.GetPort2);
+                if (fun(port.DPort.GetPort2))
+                {
+                    btn_SwitchClose_D_2.IsEnabled = false;
+                    btn_SwitchOpen_D_2.IsEnabled = true;
+                    new SwitchClose(_adam, (int)port.DPort.GetPort2);
+                }
             }
 
+            //内嵌方法
+            bool fun(int? data)
+            {
+                if (data != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("值无效");
+                    return false;
+                }
+            }
         }
     }
 }

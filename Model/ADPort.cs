@@ -12,14 +12,39 @@ namespace IotDemo.Model
     /// </summary>
     class ADPort
     {
-        public Port APort = new Port();
+        public ADataModel APort = new ADataModel();
         public Port DPort = new Port();
+    }
+
+    internal class ADataModel : Port
+    {
+        public double? _minValue_0;
+        public double? _minValue_1;
+        public double? _minValue_2;
+
+        public double? _maxValue_1;
+        public double? _maxValue_2;
+        public double? _maxValue_0;
+
+        public void SetMinValue0(string value)
+        {
+            try
+            {
+                _minValue_0 = Convert.ToDouble(value);
+            }
+            catch
+            {
+                _minValue_0 = null;
+            }
+        }
+        public void SetMinValue0(double value)=>
+            _minValue_0 = value;
     }
 
     /// <summary>
     /// 端子号模型
     /// </summary>
-    internal struct Port
+    internal class Port
     {
         private int? _port0;
         private int? _port1;

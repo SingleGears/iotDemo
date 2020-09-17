@@ -152,7 +152,8 @@
                                     Name="btn_SwitchClose_D_0"
                                     Margin="10,0"
                                     Content="关闭"
-                                    Click="ButtonClick_SwitchClose"/>
+                                    Click="ButtonClick_SwitchClose"
+                                    IsEnabled="False"/>
                             <TextBlock
                                     Name="textBlock_NoTUseSwitch_D_0"
                                     Text="不可用"
@@ -176,11 +177,14 @@
                             <Button
                                     Name="btn_SwitchOpen_D_1"
                                     Margin="10,0"
-                                    Content="打开"/>
+                                    Content="打开"
+                                    Click="ButtonClick_SwitchOpen"/>
                             <Button
                                     Name="btn_SwitchClose_D_1"
                                     Margin="10,0"
-                                    Content="关闭"/>
+                                    Content="关闭"
+                                    IsEnabled="False"
+                                    Click="ButtonClick_SwitchClose"/>
                             <TextBlock
                                     Name="textBlock_NoTUseSwitch_D_1"
                                     Text="不可用"
@@ -204,11 +208,14 @@
                             <Button
                                     Name="btn_SwitchOpen_D_2"
                                     Margin="10,0"
-                                    Content="打开"/>
+                                    Content="打开"
+                                    Click="ButtonClick_SwitchOpen"/>
                             <Button
                                     Name="btn_SwitchClose_D_2"
                                     Margin="10,0"
-                                    Content="关闭"/>
+                                    Content="关闭"
+                                    IsEnabled="False"
+                                    Click="ButtonClick_SwitchClose"/>
                             <TextBlock
                                     Name="textBlock_NoTUseSwitch_D_2"
                                     Text="不可用"
@@ -290,7 +297,7 @@
                     <TextBlock
                         Name="textBlock_DataViewShowText_A_1"
                         FontSize="24"
-                        Text="温度"
+                        Text="湿度"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top"
                         Margin="10"/>
@@ -308,7 +315,7 @@
                     <TextBlock
                         Name="textBlock_DataViewShowText_A_2"
                         FontSize="24"
-                        Text="温度"
+                        Text="光照"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top"
                         Margin="10"/>

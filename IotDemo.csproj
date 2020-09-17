@@ -57,6 +57,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Serial\Config\Led.cs" />
+    <Compile Include="Serial\Config\Switch.cs" />
+    <Compile Include="Serial\CrcModbus.cs" />
+    <Compile Include="Serial\Led.cs" />
+    <Compile Include="Serial\Model\LedModel.cs" />
+    <Compile Include="Serial\Model\SwitchModel.cs" />
+    <Compile Include="Serial\SerialHelper.cs" />
+    <Compile Include="Serial\DataEncoder.cs" />
+    <Compile Include="Data\AppData.cs" />
+    <Compile Include="Data\Config.cs" />
+    <Compile Include="Control\AnalogModelControl.xaml.cs">
+      <DependentUpon>AnalogModelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddAnalog.xaml.cs">
+      <DependentUpon>AddAnalog.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,8 +91,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Control\AnalogModelControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddAnalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ADAM4017Model.cs" />
+    <Compile Include="Model\ADAM4150Model.cs" />
+    <Compile Include="Model\ADAM_Model.cs" />
     <Compile Include="Model\ADPort.cs" />
     <Compile Include="Model\TextBoxControls.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -105,7 +132,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\bg.jpg" />
+    <Resource Include="Img\bg.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
