@@ -5,6 +5,11 @@ namespace IotDemo.Serial
     public static class CrcModbus
     {
         // Compute the MODBUS RTU CRC
+        /// <summary>
+        /// 获取CRC字节数组
+        /// </summary>
+        /// <param name="buf"></param>
+        /// <returns></returns>
         public static byte[] Get(byte[] buf)
         {
             var crc = 0xFFFF;

@@ -1,4 +1,4 @@
-﻿using IotDemo.Serial.Config.Switch;
+﻿using IotDemo.Serial.Config;
 
 namespace IotDemo.Serial.Model
 {
@@ -15,7 +15,7 @@ namespace IotDemo.Serial.Model
             PortByte = port;
             StatusBool = status;
         }
-        public SwitchModel(Port port,Status status)
+        public SwitchModel(SwitchPort port,SwitchStatus status)
         {
             Port = port;
             Status = status;
@@ -39,16 +39,16 @@ namespace IotDemo.Serial.Model
                 if (value >= 0x18)
                 {
                     _portByte = 0x18;
-                    _port = Port.DO8;
+                    _port = SwitchPort.DO8;
                 }
                 else
                 {
                     _portByte = value;
-                    _port = (Port)_portByte;
+                    _port = (SwitchPort)_portByte;
                 }
             }
         }
-        public Port Port
+        public SwitchPort Port
         {
             get => _port;
             set
@@ -64,31 +64,31 @@ namespace IotDemo.Serial.Model
             {
                 if (value)
                 {
-                    _status = Status.Open;
+                    _status = SwitchStatus.Open;
                     _statusBool = value;
                 }
                 else
                 {
-                    _status = Status.Close;
+                    _status = SwitchStatus.Close;
                     _statusBool = value;
                 }
             }
         }
-        public Status Status
+        public SwitchStatus Status
         {
             get => _status;
             set
             {
                 _status = value;
-                if (value == Status.Open)
+                if (value == SwitchStatus.Open)
                     _statusBool = true;
                 else
                     _statusBool = false;
             }
         }
-        private Port _port;
+        private SwitchPort _port;
         private byte _portByte;
         private bool _statusBool;
-        private Status _status;
+        private SwitchStatus _status;
     }
 }

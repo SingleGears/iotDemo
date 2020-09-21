@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IotDemo.Serial.Config.Led
+namespace IotDemo.Serial.Config
 {
-    public enum Play : byte
+    public enum LedPlay : byte
     {
         Left = 0x01,
         Up = 0x02,
@@ -17,7 +17,7 @@ namespace IotDemo.Serial.Config.Led
         FlashingDisplay = 0x07,
         Straightway = 0x08
     }
-    public enum Color : byte
+    public enum LedColor : byte
     {
         Red = 0,
         Green = 1,

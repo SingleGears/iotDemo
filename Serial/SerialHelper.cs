@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace IotDemo.Serial
 {
@@ -43,7 +45,13 @@ namespace IotDemo.Serial
             else
                 return null;
         }
-
+        public async void WaitOne()
+        {
+            await Task.Run(() =>
+            {
+                Thread.Sleep(100);
+            });
+        }
 
         public void Dispose()
         {

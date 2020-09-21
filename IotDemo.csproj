@@ -57,10 +57,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Serial\ADAM.cs" />
+    <Compile Include="Serial\Config\ADAM.cs" />
     <Compile Include="Serial\Config\Led.cs" />
     <Compile Include="Serial\Config\Switch.cs" />
     <Compile Include="Serial\CrcModbus.cs" />
+    <Compile Include="Serial\HalperConverter.cs" />
     <Compile Include="Serial\Led.cs" />
+    <Compile Include="Serial\Model\ADAM4017Model.cs" />
     <Compile Include="Serial\Model\LedModel.cs" />
     <Compile Include="Serial\Model\SwitchModel.cs" />
     <Compile Include="Serial\SerialHelper.cs" />

@@ -130,5 +130,33 @@ namespace IotDemo.Serial
             code.AddRange(crc);
             return code.ToArray();
         } 
+        public static byte[] GetADAM4017Bytes()
+        {
+            return new byte[8]
+            {
+                0x03,
+                0x03,
+                0x00,
+                0x00,
+                0x00,
+                0x08,
+                0x45,
+                0xEE
+            };
+        }
+        public static byte[] GetADAM4150Bytes()
+        {
+            return new byte[8]
+            {
+                0x01,
+                0x01,
+                0x00,
+                0x00,
+                0x00,
+                0x07,
+                0x7D,
+                0xC8
+            };
+        }
     }
 }

@@ -1,11 +1,11 @@
-﻿using IotDemo.Serial.Config.Led;
+﻿using IotDemo.Serial.Config;
 namespace IotDemo.Serial.Model
 {
     public class LedModel
     {
         public LedModel() { }
         public LedModel(string txt) => _txt = txt;
-        public Play Paly { get; set; } = Play.Left;
+        public LedPlay Paly { get; set; } = LedPlay.Left;
         public byte Speed
         {
             get => _speed;
@@ -28,7 +28,7 @@ namespace IotDemo.Serial.Model
                     _wait = value;
             }
         }
-        public Color Color { get; set; } = Color.Red;
+        public LedColor Color { get; set; } = LedColor.Red;
         public string Text
         {
             get => _txt;
