@@ -15,11 +15,11 @@ namespace IotDemo.Serial.Model
         {
             if (port > 7)
                 port = 7;
-            PortValue = (ADAM4017Port)port;
+            Port = (ADAM4017Port)port;
             PortValue = (int)port;
             Converter = converter;
         }
-        public ADAM4017Port PortValue { get; set; }
+        public ADAM4017Port Port { get; set; }
         public int PortValue { get; }
         public ADAM4017Converter Converter { get; set; }
     }

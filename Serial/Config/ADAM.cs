@@ -23,7 +23,17 @@ namespace IotDemo.Serial.Config
         SoilMoisture,
         WaterLevel
     }
-    public enum ADAM
+    public enum ADAM4017Port
+    {
+        AI0,
+        AI1,
+        AI2,
+        AI3,
+        AI4,
+        AI5,
+        AI6,
+        AI7,
+    }
     public enum SwitchPort : byte
     {
         DO0 = 0x10,

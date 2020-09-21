@@ -34,7 +34,8 @@ namespace IotDemo.Serial
             WaitOne();
             return Read();
         }
-
+        public double GetValue(int port, int min, int max) =>
+            HalperConverter.ADAMConvertValue(port, min, max);
         public double GetValue(ADAM4017Model model)
         {
             switch (model.Converter)
