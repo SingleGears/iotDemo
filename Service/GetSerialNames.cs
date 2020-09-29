@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 using System.Windows.Controls;
 
-namespace IotDemo.Class
+namespace IotDemo.Service
 {
     class GetSerialNames
     {

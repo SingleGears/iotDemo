@@ -37,193 +37,31 @@
                 <GroupBox
                         Name="groupBox_ASettinf"
                         Grid.Row="0"
-                        Header="模拟量"
-                        IsEnabled="False">
-                    <StackPanel 
+                        Header="模拟量" >
+                    <ScrollViewer
+                        VerticalScrollBarVisibility="Auto"
+                        HorizontalScrollBarVisibility="Hidden">
+                        <StackPanel
+                            Name="view_ValueContent"
                             Margin="5">
-                        <!--setting data 00-->
-                        <StackPanel
-                                Margin="0,10"
-                                Orientation="Horizontal">
-                            <TextBlock 
-                                    Name="textBlock_ShowText_A_0"
-                                    Margin="10,0"
-                                    Text="温度"/>
-                            <TextBox 
-                                    Name="textBox_PortNumb_A_0"
-                                    Width="30" 
-                                    TextAlignment="Center"
-                                    ToolTip="端口"/>
-                            <TextBox
-                                    x:Name="textBox_MinVlaue_A_0"
-                                    Margin="10,0"
-                                    Width="50"
-                                    ToolTip="决策最小值"/>
-                            <TextBlock
-                                    Text="~"/>
-                            <TextBox
-                                    x:Name="textBox_MaxVlaue_A_0"
-                                    Margin="10,0"
-                                    Width="50"
-                                    ToolTip="决策最大值"/>
+
                         </StackPanel>
-                        <!--setting data 01-->
-                        <StackPanel
-                                Margin="0,10"
-                                Orientation="Horizontal">
-                            <TextBlock 
-                                    Name="textBlock_ShowText_A_1"
-                                    Margin="10,0"
-                                    Text="湿度"/>
-                            <TextBox 
-                                    Name="textBox_PortNumb_A_1"
-                                    Width="30" 
-                                    TextAlignment="Center"
-                                    ToolTip="端口"/>
-                            <TextBox
-                                    x:Name="textBox_MinVlaue_A_1"
-                                    Margin="10,0"
-                                    Width="50"
-                                    ToolTip="决策最小值"/>
-                            <TextBlock
-                                    Text="~"/>
-                            <TextBox
-                                    x:Name="textBox_MaxVlaue_A_1"
-                                    Margin="10,0"
-                                    Width="50"
-                                    ToolTip="决策最大值"/>
-                        </StackPanel>
-                        <!--setting data 02-->
-                        <StackPanel
-                                Margin="0,10"
-                                Orientation="Horizontal">
-                            <TextBlock 
-                                    Name="textBlock_ShowText_A_2"
-                                    Margin="10,0"
-                                    Text="光照"/>
-                            <TextBox 
-                                    Name="textBox_PortNumb_A_2"
-                                    Width="30" 
-                                    TextAlignment="Center"
-                                    ToolTip="端口"/>
-                            <TextBox
-                                    x:Name="textBox_MinVlaue_A_2"
-                                    Margin="10,0"
-                                    Width="50"
-                                    ToolTip="决策最小值"/>
-                            <TextBlock
-                                    Text="~"/>
-                            <TextBox
-                                    x:Name="textBox_MaxVlaue_A_2"
-                                    Margin="10,0"
-                                    Width="50"
-                                    ToolTip="决策最大值"/>
-                        </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
                 </GroupBox>
                 <!--02-->
                 <GroupBox
                     Name="groupBox_DSetting"
                     Grid.Row="1"
-                    Header="数字量"
-                    IsEnabled="False">
-                    <StackPanel
+                    Header="数字量">
+                    <ScrollViewer 
+                        HorizontalScrollBarVisibility="Hidden"
+                        VerticalScrollBarVisibility="Auto">
+                        <StackPanel
+                            Name="view_SwitchContext"
                             Margin="5">
-                        <!--Switch0-->
-                        <StackPanel
-                                Margin="0,10"
-                                Orientation="Horizontal">
-                            <TextBlock
-                                    x:Name="textBlock_ShowText_D_0"
-                                    Margin="10,0,0,0"
-                                    Text="一号灯"/>
-                            <TextBox
-                                    Margin="10,0"
-                                    Name="textBox_PortNumb_D_0"
-                                    Width="30"
-                                    TextAlignment="Center"
-                                    ToolTip="端口"/>
-                            <Button
-                                    Name="btn_SwitchOpen_D_0"
-                                    Margin="10,0"
-                                    Content="打开"
-                                    Click="ButtonClick_SwitchOpen"/>
-                            <Button
-                                    Name="btn_SwitchClose_D_0"
-                                    Margin="10,0"
-                                    Content="关闭"
-                                    Click="ButtonClick_SwitchClose"
-                                    IsEnabled="False"/>
-                            <TextBlock
-                                    Name="textBlock_NoTUseSwitch_D_0"
-                                    Text="不可用"
-                                    Foreground="Chocolate"
-                                    Visibility="Hidden"/>
-                        </StackPanel>
-                        <!--Switch1-->
-                        <StackPanel
-                                Margin="0,10"
-                                Orientation="Horizontal">
-                            <TextBlock
-                                    x:Name="textBlock_ShowText_D_1"
-                                    Margin="10,0,0,0"
-                                    Text="二号灯"/>
-                            <TextBox
-                                    Margin="10,0"
-                                    Name="textBox_PortNumb_D_1"
-                                    Width="30"
-                                    TextAlignment="Center"
-                                    ToolTip="端口"/>
-                            <Button
-                                    Name="btn_SwitchOpen_D_1"
-                                    Margin="10,0"
-                                    Content="打开"
-                                    Click="ButtonClick_SwitchOpen"/>
-                            <Button
-                                    Name="btn_SwitchClose_D_1"
-                                    Margin="10,0"
-                                    Content="关闭"
-                                    IsEnabled="False"
-                                    Click="ButtonClick_SwitchClose"/>
-                            <TextBlock
-                                    Name="textBlock_NoTUseSwitch_D_1"
-                                    Text="不可用"
-                                    Foreground="Chocolate"
-                                    Visibility="Hidden"/>
-                        </StackPanel>
-                        <!--Switch2-->
-                        <StackPanel
-                                Margin="0,10"
-                                Orientation="Horizontal">
-                            <TextBlock
-                                    x:Name="textBlock_ShowText_D_2"
-                                    Margin="10,0,0,0"
-                                    Text="警报灯"/>
-                            <TextBox
-                                    Margin="10,0"
-                                    Name="textBox_PortNumb_D_2"
-                                    Width="30"
-                                    TextAlignment="Center"
-                                    ToolTip="端口"/>
-                            <Button
-                                    Name="btn_SwitchOpen_D_2"
-                                    Margin="10,0"
-                                    Content="打开"
-                                    Click="ButtonClick_SwitchOpen"/>
-                            <Button
-                                    Name="btn_SwitchClose_D_2"
-                                    Margin="10,0"
-                                    Content="关闭"
-                                    IsEnabled="False"
-                                    Click="ButtonClick_SwitchClose"/>
-                            <TextBlock
-                                    Name="textBlock_NoTUseSwitch_D_2"
-                                    Text="不可用"
-                                    Foreground="Chocolate"
-                                    Visibility="Hidden"/>
-                        </StackPanel>
 
-                    </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
                 </GroupBox>
                 <GroupBox
                         Name="groupBox_SerialSetting"
@@ -269,65 +107,8 @@
             Margin="10"
             Header="数据">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150*"/>
-                    <ColumnDefinition Width="150*"/>
-                    <ColumnDefinition Width="150*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel
-                    Grid.Column="0">
-                    <TextBlock
-                        Name="textBlock_DataViewShowText_A_0"
-                        FontSize="24"
-                        Text="温度"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Margin="10"/>
-                    <TextBlock
-                        Name="textBlock_DataShow_A_0"
-                        FontSize="24"
-                        Text="00"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Margin="10"/>
 
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="1">
-                    <TextBlock
-                        Name="textBlock_DataViewShowText_A_1"
-                        FontSize="24"
-                        Text="湿度"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Margin="10"/>
-                    <TextBlock
-                        Name="textBlock_DataShow_A_1"
-                        FontSize="24"
-                        Text="00"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Margin="10"/>
 
-                </StackPanel>
-                <StackPanel
-                    Grid.Column="2">
-                    <TextBlock
-                        Name="textBlock_DataViewShowText_A_2"
-                        FontSize="24"
-                        Text="光照"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Margin="10"/>
-                    <TextBlock
-                        Name="textBlock_DataShow_A_2"
-                        FontSize="24"
-                        Text="00"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Margin="10"/>
-
-                </StackPanel>
             </Grid>
         </GroupBox>
     </Grid>
