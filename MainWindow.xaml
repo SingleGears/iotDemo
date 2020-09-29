@@ -42,8 +42,13 @@
                         VerticalScrollBarVisibility="Auto"
                         HorizontalScrollBarVisibility="Hidden">
                         <StackPanel
-                            Name="view_ValueContent"
+                            Name="view_AnalogContent"
                             Margin="5">
+                            <StackPanel>
+                                <Button 
+                                    Content="添加监听"
+                                    Click="btn_AddAnalogControl"/>
+                            </StackPanel>
 
                         </StackPanel>
                     </ScrollViewer>

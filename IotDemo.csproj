@@ -57,6 +57,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\Menu.cs" />
+    <Compile Include="Model\AnalogConfigModel.cs" />
+    <Compile Include="Model\BackData.cs" />
     <Compile Include="Serial\ADAM.cs" />
     <Compile Include="Serial\Config\ADAM.cs" />
     <Compile Include="Serial\Config\Led.cs" />
@@ -73,6 +76,8 @@
     <Compile Include="Control\AnalogModelControl.xaml.cs">
       <DependentUpon>AnalogModelControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service\Clock.cs" />
+    <Compile Include="Service\DeviceConnect.cs" />
     <Compile Include="Windows\AddAnalog.xaml.cs">
       <DependentUpon>AddAnalog.xaml</DependentUpon>
     </Compile>
@@ -127,8 +132,6 @@
   <ItemGroup>
     <Resource Include="Img\bg.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

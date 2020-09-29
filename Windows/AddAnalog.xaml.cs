@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using IotDemo.Data;
+using IotDemo.Model;
+
 namespace IotDemo.Windows
 {
     /// <summary>
@@ -19,36 +22,48 @@ namespace IotDemo.Windows
     /// </summary>
     public partial class AddAnalog : Window
     {
-        readonly string[] _helperModeContext =
+        AnalogConfigModel _data;
+        public AddAnalog(ref AnalogConfigModel model)
         {
-            "温度",
-            "湿度",
-            "光照",
-            "风速",
-            "水位",
-            "水温",
-            "二氧化碳",
-            "大气压强",
-            "空气质量",
-            "土壤温度",
-            "土壤湿度"
-        };
-        readonly string[] _decisionModeContext =
-        {
-            "禁用",
-            "大于",
-            "小于",
-            "范围"
-        };
-        public AddAnalog()
-        {
+            _data = model;
             InitializeComponent();
 
+            foreach (var i in AppData._HelperModeContext)
+                comboBox_HelperMode.Items.Add(i.Key);
+            foreach (var i in AppData._DecisionModeContext)
+                comboBox_Decision.Items.Add(i.Key);
+        }
 
-            foreach (var i in _helperModeContext)
-                comboBox_HelperMode.Items.Add(i);
-            foreach (var i in _decisionModeContext)
-                comboBox_Decision.Items.Add(i);
+        private void btn_Close(object sender, RoutedEventArgs e)
+        {
+            _data = null;
+            Close();
+        }
+
+        private void btn_Add(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                _data.ID = Guid.NewGuid();
+                _data.Port = isMore(Convert.ToUInt32(txt_Port.Text));
+                _data.Name = comboBox_HelperMode.Text;
+                _data.Helper = AppData._HelperModeContext[comboBox_HelperMode.Text];
+                _data.Decision = AppData._DecisionModeContext[comboBox_Decision.Text];
+                _data.MaxValue = Convert.ToInt32(txt_Max.Text);
+                _data.MinValue = Convert.ToInt32(txt_Min.Text);
+                Close();
+            }
+            catch(Exception exc) 
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+        private uint isMore(uint port)
+        {
+            if (port > 7)
+                throw new Exception(nameof(isMore) + "Port More,Port: 0~7");
+            else
+                return port;
         }
     }
 }

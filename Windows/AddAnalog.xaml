@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IotDemo.Windows"
         mc:Ignorable="d"
-        Title="AddAnalog" Height="150" Width="600">
+        Title="添加模拟量监听单元" Height="150" Width="600">
     <Grid>
         <StackPanel
             Margin="20"
@@ -14,16 +14,9 @@
             VerticalAlignment="Top">
             <TextBlock
                 Margin="2,8"
-                Text="ID"/>
-            <TextBox
-                Margin="5"
-                TextAlignment="Center"
-                Width="40"
-                ToolTip="ID唯一"/>
-            <TextBlock
-                Margin="2,8"
                 Text="端口"/>
             <TextBox
+                Name="txt_Port"
                 Margin="5"
                 TextAlignment="Center"
                 Width="40"/>
@@ -46,12 +39,14 @@
                 Orientation="Horizontal"
                 IsEnabled="False">
                 <TextBox
+                    Name="txt_Max"
                     TextAlignment="Center"
                     Width="60"/>
                 <TextBlock
                     Margin="8,0"
                     Text="~"/>
                 <TextBox
+                    Name="txt_Min"
                     TextAlignment="Center"
                     Width="60"/>
             </StackPanel>
@@ -64,11 +59,13 @@
             <Button 
                 HorizontalAlignment="Right"
                 Padding="10,4"
-                Content="添加"/>
+                Content="添加"
+                Click="btn_Add"/>
             <Button
                 Padding="10,4"
                 HorizontalAlignment="Left"
-                Content="取消"/>
+                Content="取消"
+                Click="btn_Close"/>
         </Grid>
     </Grid>
 </Window>

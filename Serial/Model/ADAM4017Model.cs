@@ -7,7 +7,7 @@ using IotDemo.Serial.Config;
 
 namespace IotDemo.Serial.Model
 {
-    class ADAM4017Model
+    public class ADAM4017Model
     {
         public ADAM4017Model(ADAM4017Port port, ADAM4017Converter converter) : this((uint)port, converter)
         { }

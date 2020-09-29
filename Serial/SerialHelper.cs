@@ -45,13 +45,8 @@ namespace IotDemo.Serial
             else
                 return null;
         }
-        public async void WaitOne()
-        {
-            await Task.Run(() =>
-            {
-                Thread.Sleep(100);
-            });
-        }
+        public async void WaitOne() =>
+            await Task.Delay(100);
 
         public void Dispose()
         {

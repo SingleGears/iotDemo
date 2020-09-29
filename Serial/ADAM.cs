@@ -1,4 +1,5 @@
-﻿using IotDemo.Serial.Model;
+﻿using IotDemo.Serial.Config;
+using IotDemo.Serial.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace IotDemo.Serial
 {
-    class ADAM : SerialHelper
+    public class ADAM : SerialHelper
     {
         public ADAM(string com) : base(com)
         {
@@ -38,31 +39,20 @@ namespace IotDemo.Serial
             HalperConverter.ADAMConvertValue(port, min, max);
         public double GetValue(ADAM4017Model model)
         {
-            switch (model.Converter)
-            {
-                case Config.ADAM4017Converter.Temperature:
-                    return HalperConverter.ADAMConvertValue(GetValue(model.PortValue), -10, 60);
-                case Config.ADAM4017Converter.Humidity:
-                    return HalperConverter.ADAMConvertValue(GetValue(model.PortValue), 50, 100);
-                case Config.ADAM4017Converter.Light:
-                    return HalperConverter.ADAMConvertValue(GetValue(model.PortValue), 0, 20000);
-                case Config.ADAM4017Converter.Wind:
-                    return HalperConverter.ADAMConvertValue(GetValue(model.PortValue), 0, 70);
-                case Config.ADAM4017Converter.AirPressure:
-                    return HalperConverter.ADAMConvertValue(GetValue(model.PortValue), 0, 110);
-                case Config.ADAM4017Converter.CO2:
-                    return HalperConverter.ADAMConvertValue(GetValue(model.PortValue), 0, 5000);
-                case Config.ADAM4017Converter.AirQuality:
-                    return (double)GetValue(model) / 100.0;
-                default:
-                    throw new Exception(nameof(GetValue)+"Error");
-            }
+            return HalperConverter.ADAMConvertValue(GetData(model.PortValue), model.Converter);
         }
-        private int GetValue(int port)
+        /// <summary>
+        /// 获取值，无换算
+        /// </summary>
+        /// <param name="port"></param>
+        /// <returns></returns>
+        public int GetData(int port)
         {
             var data = ReadADAM4017Data();
             return (int)BitConverter.ToUInt16(this.DataSplit(data, port), 0);
         }
+        public int GetData(byte[] data, int port) =>
+            (int)BitConverter.ToUInt16(this.DataSplit(data, port), 0);
 
         private byte[] DataSplit(byte[] data,int channel)
         {
