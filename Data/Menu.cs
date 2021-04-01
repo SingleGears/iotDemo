@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IotDemo.Data.Menu
-{
-    public enum DecisionMode
-    {
+﻿namespace IotDemo.Data.Menu {
+    /// <summary>
+    /// 逻辑判断选项
+    /// </summary>
+    public enum DecisionMode {
         Close,
         Greater,
         Less,

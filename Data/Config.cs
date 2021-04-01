@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IotDemo.Data
-{
-    class Config
-    {
+namespace IotDemo.Data {
+    class Config {
+
     }
 }

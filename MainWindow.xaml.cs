@@ -19,15 +19,12 @@ using IotDemo.Windows;
 using IotDemo.Control;
 using IotDemo.Serial;
 
-namespace IotDemo
-{
+namespace IotDemo {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+    public partial class MainWindow : Window {
+        public MainWindow() {
             InitializeComponent();
 
             //获取串口
@@ -39,8 +36,7 @@ namespace IotDemo
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ButtonClick_RpeatGetSerialPort(object sender, RoutedEventArgs e)
-        {
+        private void ButtonClick_RpeatGetSerialPort(object sender, RoutedEventArgs e) {
             new GetSerialNames(comBoBox_SerialNames);
         }
 
@@ -49,36 +45,34 @@ namespace IotDemo
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ButtonClick_OpenSerial(object sender, RoutedEventArgs e)
-        {
+        private void ButtonClick_OpenSerial(object sender, RoutedEventArgs e) {
             _adam = new ADAM(
-                comBoBox_SerialNames.Text,
-                Convert.ToInt32(comBoBox_SerialPort));
-            _adam.Open();
-            _data = new BackData(_adam);
+                comBoBox_SerialNames.Text,              //串口
+                Convert.ToInt32(comBoBox_SerialPort));  //波特率
+            _adam.Open();                               //启动
+            _data = new BackData(_adam);                //后台注册
         }
         /// <summary>
         /// 添加一个模拟量监听模块的点击事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_AddAnalogControl(object sender, RoutedEventArgs e)
-        {
-            if (_adam != null)
-            {
+        private void btn_AddAnalogControl(object sender, RoutedEventArgs e) {
+            if (_adam != null) {
                 var model = new AnalogConfigModel();
-                AddAnalog win = new AddAnalog(ref model);
+                //启动添加用户控件的窗口
+                AddAnalog win = new AddAnalog(model);
                 win.ShowDialog();
-                if (model != null)
-                {
-                    var control = new AnalogModelControl(_data,model);
-                    control.DestroyEvent += DestroyAnalogControl;
-                    view_AnalogContent.Children.Add(control);
-                    _data._AnalogConfigModels.Add(model.ID, control);
+                model = win.GetMode;
+                //将用户控件添加到串口中
+                if (model != null) {
+                    var control = new AnalogModelControl(_data, model);     //用户控件初始化
+                    control.DestroyEvent += DestroyAnalogControl;           //注册销毁控件事件
+                    view_AnalogContent.Children.Add(control);               //添加控件
+                    _data.AnalogConfigModels.Add(model.ID, control);        //控件注册
                 }
             }
-            else
-            {
+            else {
                 MessageBox.Show("请先打开串口");
             }
         }
@@ -87,13 +81,12 @@ namespace IotDemo
         /// 销毁子控件委托事件
         /// </summary>
         /// <param name="id"></param>
-        private void DestroyAnalogControl(Guid id)
-        {
+        private void DestroyAnalogControl(Guid id) {
             UIElement obj;
-            if (_data._AnalogConfigModels.TryGetValue(id, out obj))
-            {
-                view_AnalogContent.Children.Remove(obj);
-                _data._AnalogConfigModels.Remove(id);
+            //获得用户控件
+            if (_data.AnalogConfigModels.TryGetValue(id, out obj)) {    //根据唯一ID获得控件
+                view_AnalogContent.Children.Remove(obj);                //删除控件
+                _data.AnalogConfigModels.Remove(id);                    //控件注销
             }
         }
 

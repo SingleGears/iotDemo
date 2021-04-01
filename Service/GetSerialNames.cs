@@ -10,13 +10,17 @@ namespace IotDemo.Service
 {
     class GetSerialNames
     {
-        public GetSerialNames(ComboBox obj)
+        /// <summary>
+        /// 获取本机串口组
+        /// </summary>
+        /// <param name="combo"></param>
+        public GetSerialNames(ComboBox combo)
         {
             var list = SerialPort.GetPortNames();
-            obj.Items.Clear();
+            combo.Items.Clear();
             foreach(var t in list)
             {
-                obj.Items.Add(t);
+                combo.Items.Add(t);
             }
         }
     }

@@ -8,10 +8,23 @@ namespace IotDemo.Serial
 {
     internal static class HalperConverter
     {
+        /// <summary>
+        /// 数据换算
+        /// </summary>
+        /// <param name="sensorValue"></param>
+        /// <param name="mixRange"></param>
+        /// <param name="maxRange"></param>
+        /// <returns></returns>
         public static double ADAMConvertValue(int sensorValue, int mixRange, int maxRange)
         {
             return (double)(maxRange - mixRange) / 65535.0 * (double)sensorValue + (double)mixRange;
         }
+        /// <summary>
+        /// 换算类型选择
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="helper"></param>
+        /// <returns></returns>
         public static double ADAMConvertValue(int value,Config.ADAM4017Converter helper)
         {
             switch (helper)
@@ -34,6 +47,13 @@ namespace IotDemo.Serial
                     throw new Exception(nameof(ADAMConvertValue) + "Error");
             }
         }
+        /// <summary>
+        /// Zigbee换算公式
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="maxRange"></param>
+        /// <param name="mixRange"></param>
+        /// <returns></returns>
         public static double ZigBeeConvertValue(int value, int maxRange, int mixRange)
         {
             double num = (double)(value * 3300 / 1023) / 150.0;

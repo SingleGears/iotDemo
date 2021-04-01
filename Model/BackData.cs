@@ -7,17 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace IotDemo.Model
-{
-    public class BackData
-    {
-        public BackData(ADAM adam)
-        {
-            _Adam = adam;
-            _Clock = new Clock(adam);
+namespace IotDemo.Model {
+    public class BackData {
+        /// <summary>
+        /// 用空控件间传递控制数据
+        /// </summary>
+        /// <param name="adam"></param>
+        public BackData(ADAM adam) {
+            Adam = adam;
+            Timer = new Clock(adam);
         }
-        public ADAM _Adam { get; private set; }
-        public Dictionary<Guid,UIElement> _AnalogConfigModels { get; set; }
-        public readonly Clock _Clock;
+        public ADAM Adam { get; private set; }
+        public Dictionary<Guid, UIElement> AnalogConfigModels { get; set; }
+        public readonly Clock Timer;
     }
 }

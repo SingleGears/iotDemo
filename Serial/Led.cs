@@ -1,5 +1,8 @@
 ﻿namespace IotDemo.Serial
 {
+    /// <summary>
+    /// LED屏处理
+    /// </summary>
     public class Led : SerialHelper
     {
         public Led(string com) : base(com)

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IotDemo.Serial.Config
-{
-    public enum ADAM4017Converter
-    {
+﻿namespace IotDemo.Serial.Config {
+    /// <summary>
+    /// ADAM4017数据类型枚举
+    /// </summary>
+    public enum ADAM4017Converter {
         Temperature,
         Light,
         Humidity,
@@ -16,15 +11,19 @@ namespace IotDemo.Serial.Config
         CO2,
         AirQuality
     }
-    public enum ZigbeeConverter
-    {
+    /// <summary>
+    /// Zigbee数据类型枚举
+    /// </summary>
+    public enum ZigbeeConverter {
         SoilTemperatuer,
         WaterTemperature,
         SoilMoisture,
         WaterLevel
     }
-    public enum ADAM4017Port
-    {
+    /// <summary>
+    /// ADADM4017接口枚举
+    /// </summary>
+    public enum ADAM4017Port {
         AI0,
         AI1,
         AI2,
@@ -34,8 +33,10 @@ namespace IotDemo.Serial.Config
         AI6,
         AI7,
     }
-    public enum SwitchPort : byte
-    {
+    /// <summary>
+    /// 数字量开关接口枚举
+    /// </summary>
+    public enum SwitchPort : byte {
         DO0 = 0x10,
         DO1 = 0x11,
         DO2 = 0x12,
@@ -46,8 +47,10 @@ namespace IotDemo.Serial.Config
         DO7 = 0x17,
         DO8 = 0x18
     }
-    public enum SwitchStatus : byte
-    {
+    /// <summary>
+    /// 数字量接口输入状态枚举
+    /// </summary>
+    public enum SwitchStatus : byte {
         Open = 0xFF,
         Close = 0x00,
     }

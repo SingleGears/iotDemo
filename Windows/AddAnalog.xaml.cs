@@ -23,20 +23,25 @@ namespace IotDemo.Windows
     public partial class AddAnalog : Window
     {
         AnalogConfigModel _data;
-        public AddAnalog(ref AnalogConfigModel model)
+        public AddAnalog(AnalogConfigModel model)
         {
             _data = model;
             InitializeComponent();
 
+            //加载显示的资源，资源有对应的枚举，在AppDate类注册
             foreach (var i in AppData._HelperModeContext)
                 comboBox_HelperMode.Items.Add(i.Key);
             foreach (var i in AppData._DecisionModeContext)
                 comboBox_Decision.Items.Add(i.Key);
         }
-
+        /// <summary>
+        /// 返回模型
+        /// </summary>
+        public AnalogConfigModel GetMode { get; }
         private void btn_Close(object sender, RoutedEventArgs e)
         {
             _data = null;
+            this.DialogResult = false;
             Close();
         }
 
@@ -44,13 +49,14 @@ namespace IotDemo.Windows
         {
             try
             {
-                _data.ID = Guid.NewGuid();
-                _data.Port = isMore(Convert.ToUInt32(txt_Port.Text));
-                _data.Name = comboBox_HelperMode.Text;
-                _data.Helper = AppData._HelperModeContext[comboBox_HelperMode.Text];
-                _data.Decision = AppData._DecisionModeContext[comboBox_Decision.Text];
-                _data.MaxValue = Convert.ToInt32(txt_Max.Text);
-                _data.MinValue = Convert.ToInt32(txt_Min.Text);
+                _data.ID = Guid.NewGuid();                                              //生成唯一ID
+                _data.Port = isMore(Convert.ToUInt32(txt_Port.Text));                   //数据接口
+                _data.Name = comboBox_HelperMode.Text;                                  //传感器名
+                _data.Helper = AppData._HelperModeContext[comboBox_HelperMode.Text];    //换算类型
+                _data.Decision = AppData._DecisionModeContext[comboBox_Decision.Text];  //逻辑判断
+                _data.MaxValue = Convert.ToInt32(txt_Max.Text);                         //最大值
+                _data.MinValue = Convert.ToInt32(txt_Min.Text);                         //最小值
+                this.DialogResult = true;
                 Close();
             }
             catch(Exception exc) 

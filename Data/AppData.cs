@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IotDemo.Data.Menu;
+﻿using IotDemo.Data.Menu;
 using IotDemo.Serial.Config;
+using System.Collections.Generic;
 
-namespace IotDemo.Data
-{
-    class AppData
-    {
+namespace IotDemo.Data {
+    /// <summary>
+    /// 窗口资源数据
+    /// </summary>
+    class AppData {
         public static readonly Dictionary<string, ADAM4017Converter> _HelperModeContext = new Dictionary<string, ADAM4017Converter>
         {
             {"温度",ADAM4017Converter.Temperature },
